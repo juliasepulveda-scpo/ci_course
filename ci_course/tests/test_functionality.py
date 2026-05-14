@@ -1,6 +1,7 @@
 import ci_course
 import pytest
 
+
 def test_greet():
     """
     Test the function `greet` in functionality.py
@@ -16,6 +17,7 @@ def test_minimum():
     assert ci_course.minimum(1, 2, 3) == 1
     assert ci_course.minimum(1.2, 2.3) == 1.2
     assert ci_course.minimum(-1.2, -3) == -3
-    
+    assert ci_course.minimum("hi", "there") is None
+
     with pytest.raises(TypeError):
-        error_expected = ci_course.minimum('lo#', None, 'la')
+        ci_course.minimum('lo#', None, 'la')
